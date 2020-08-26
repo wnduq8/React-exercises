@@ -1,10 +1,12 @@
 import React, { Component } from "react";
+import { withRouter } from "react-router-dom"
 import "./Card.scss";
 
 class Card extends Component {
   render() {
     return (
-      <div className="card-container">
+      <div className="card-container"
+      onClick={() => this.props.history.push(`/monsters/${this.props.id}`)}>
         <img
           src={`https://robohash.org/${this.props.id}?set=set2&size=180x180`}
           alt=""
@@ -16,4 +18,4 @@ class Card extends Component {
   }
 }
 
-export default Card;
+export default withRouter(Card);

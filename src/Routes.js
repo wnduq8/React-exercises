@@ -15,7 +15,7 @@ export default class Routes extends Component {
           <Route exact path="/onChange" component={OnChange} />
           <Route exact path="/MenuTab" component={MenuTab} />
           <Route exact path="/monsters" component={UrlParameters} />
-          <Route exact path="/monsters/detail" component={MonsterDetail} />
+          <Route exact path="/monsters/:hello" component={MonsterDetail} />
         </Switch>
       </Router>
     );
